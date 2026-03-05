@@ -525,7 +525,12 @@ return(
       <button
         onClick={prevStep}
         disabled={step===0}
-        className="px-4 py-2 text-sm rounded-xl bg-slate-200 disabled:opacity-40"
+        className="px-4 py-2 text-sm rounded-xl bg-green-600 text-white
+          hover:bg-green-700
+          active:scale-95
+          active:bg-green-800
+          transition-all duration-150
+          disabled:opacity-40 disabled:cursor-not-allowed"
       >
         Kembali
       </button>
@@ -543,7 +548,12 @@ return(
         <button
           onClick={handleSubmit}
           disabled={!isAnswered()}
-          className="px-4 py-2 text-sm rounded-xl bg-blue-600 text-white disabled:opacity-40"
+            className="px-4 py-2 text-sm rounded-xl bg-blue-600 text-white
+            hover:bg-blue-700
+            active:bg-blue-700
+            active:scale-95
+            transition-all duration-150
+            disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Submit
         </button>
@@ -552,7 +562,12 @@ return(
         <button
           onClick={nextStep}
           disabled={!isAnswered()}
-          className="px-4 py-2 text-sm rounded-xl bg-green-600 text-white disabled:opacity-40"
+            className="px-4 py-2 text-sm rounded-xl bg-green-600 text-white
+            hover:bg-green-700
+            active:bg-green-700
+            active:scale-95
+            transition-all duration-150
+            disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Lanjut
         </button>
