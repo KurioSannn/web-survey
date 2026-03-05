@@ -13,6 +13,23 @@ const [showPain,setShowPain] = useState(false);
 const [showFeature,setShowFeature] = useState(false);
 const [showUI,setShowUI] = useState(false);
 
+useEffect(()=>{
+
+const auth = localStorage.getItem("admin");
+
+if(auth !== "true"){
+
+const pass = prompt("Admin Password");
+
+if(pass === "admin123"){
+localStorage.setItem("admin","true");
+}else{
+window.location.href="/";
+}
+
+}
+
+},[]);
 
 useEffect(()=>{
 
