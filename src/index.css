@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes ambient {
+  0% {
+    background-color: #009C87;
+  }
+  25% {
+    background-color: #009C48;
+  }
+  50% {
+    background-color: #025C1E;
+  }
+  75% {
+    background-color: #E3DA3A;
+  }
+  100% {
+    background-color: #009C87;
+  }
+}
+
+
+@keyframes blob {
+
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+}
+
+.animate-blob {
+  animation: blob 12s infinite ease-in-out;
+}
+
+.particle{
+
+position:absolute;
+background:radial-gradient(circle,#ffffff,#00ffcc,transparent);
+
+border-radius:50%;
+
+opacity:0.8;
+
+filter:blur(1px);
+
+animation:particleFloat 10s infinite ease-in-out;
+
+}
+
+@keyframes particleFloat{
+
+0%{
+transform:translateY(0px) scale(0.7);
+opacity:0.6;
+}
+
+50%{
+transform:translateY(-60px) scale(1.3);
+opacity:1;
+}
+
+100%{
+transform:translateY(0px) scale(0.7);
+opacity:0.6;
+}
+
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
