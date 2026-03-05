@@ -518,38 +518,49 @@ return(
   {/* ✅ FULL WIDTH FOOTER */}
   <div className="w-full sticky bottom-0 left-0 right-0 bg-white border-t shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
 
-    <div className="max-w-xl mx-auto px-5 py-4 flex justify-between">
+    <div className="max-w-xl mx-auto px-5 py-4 grid grid-cols-3 items-center">
 
+    {/* KIRI */}
+    <div className="flex justify-start">
       <button
-      onClick={prevStep}
-      disabled={step===0}
-      className="px-4 py-2 text-sm rounded-xl bg-slate-200 disabled:opacity-40"
+        onClick={prevStep}
+        disabled={step===0}
+        className="px-4 py-2 text-sm rounded-xl bg-slate-200 disabled:opacity-40"
       >
-      Kembali
+        Kembali
       </button>
+    </div>
 
+    {/* TENGAH */}
+    <div className="flex justify-center">
+      <MusicPlayer />
+    </div>
+
+    {/* KANAN */}
+    <div className="flex justify-end">
       {step===total-1
       ?(
-      <button
-      onClick={handleSubmit}
-      disabled={!isAnswered()}
-      className="px-4 py-2 text-sm rounded-xl bg-blue-600 text-white disabled:opacity-40"
-      >
-      Submit
-      </button>
+        <button
+          onClick={handleSubmit}
+          disabled={!isAnswered()}
+          className="px-4 py-2 text-sm rounded-xl bg-blue-600 text-white disabled:opacity-40"
+        >
+          Submit
+        </button>
       )
       :(
-      <button
-      onClick={nextStep}
-      disabled={!isAnswered()}
-      className="px-4 py-2 text-sm rounded-xl bg-green-600 text-white disabled:opacity-40"
-      >
-      Lanjut
-      </button>
+        <button
+          onClick={nextStep}
+          disabled={!isAnswered()}
+          className="px-4 py-2 text-sm rounded-xl bg-green-600 text-white disabled:opacity-40"
+        >
+          Lanjut
+        </button>
       )
       }
-<MusicPlayer />
     </div>
+
+  </div>
 
   </div>
 
