@@ -532,7 +532,7 @@ return(
           transition-all duration-150
           disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        Kembali
+        Kembalinp
       </button>
     </div>
 

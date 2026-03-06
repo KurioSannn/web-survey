@@ -10,8 +10,7 @@ export type Question = {
 export const UI_TEST = {
   overall:{
     A:"/mockup/overall/a.png",
-    B:"/mockup/overall/b.png",
-    C:"/mockup/overall/c.png"
+    B:"/mockup/overall/b.png"
   }
 };
 
@@ -178,11 +177,10 @@ export const phase3: Question[] = [
 id:"p3_q1",
 type:"radio",
 question:"Dari tampilan berikut, mana yang paling nyaman digunakan?",
-options:["A","B","C"],
+options:["A","B"],
 images:[
 UI_TEST.overall.A,
-UI_TEST.overall.B,
-UI_TEST.overall.C
+UI_TEST.overall.B
 ]
 }
 
