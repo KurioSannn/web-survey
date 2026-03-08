@@ -451,11 +451,12 @@ return(
         </h2>
 
         {current.type==="checkbox" && (
-        <p className="text-xs text-slate-400">
-        Bisa pilih lebih dari satu
-        </p>
+        <div className="flex items-center gap-2 text-xs text-green-600 bg-green-50 px-3 py-2 rounded-lg">
+        <span>☑</span>
+        <span>Pertanyaan ini bisa memilih lebih dari satu jawaban</span>
+        </div>
         )}
-
+        
         <div className="space-y-3">
 
         {current.options.map((opt:string,idx:number)=>{
