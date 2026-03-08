@@ -74,11 +74,15 @@ if(!data) return <p>Loading...</p>;
 
 const percent = (val:number)=>{
 
-if(!data?.total) return 0;
-return Math.round((val / data.total) * 100);
+const totalVotes = featureStats.reduce(
+(sum,item)=> sum + item.total,0
+);
+
+if(!totalVotes) return 0;
+
+return Math.round((val / totalVotes) * 100);
 
 };
-
 
 return(
 

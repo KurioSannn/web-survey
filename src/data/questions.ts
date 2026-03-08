@@ -9,8 +9,8 @@ export type Question = {
 
 export const UI_TEST = {
   overall:{
-    A:"/mockup/overall/a.png",
-    B:"/mockup/overall/b.png"
+    A:"/mockup/overall/a.webp",
+    B:"/mockup/overall/b.webp"
   }
 };
 
